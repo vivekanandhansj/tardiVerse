@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-
+import authRoutes from "./routes/auth.js";
 import cors from "cors";
 
 
@@ -20,6 +20,10 @@ const connect= async()=>{
 }
 
 app.use(express.json())
+app.use("/api/auth",authRoutes )
+ app.get("/", (req, res) =>
+  res.send(`Server Running`)
+);
 
 app.use((err,req,res,next)=>{
     const status = err.status || 500;
