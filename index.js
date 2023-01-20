@@ -31,4 +31,4 @@ app.use((err,req,res,next)=>{
     })
 })
 app.listen(process.env.PORT,()=>{connect()
-console.log("server connecter")})
+console.log("server connected")})
