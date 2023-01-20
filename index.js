@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-import authRoutes from "./routes/auth.js";
+import authRoute from "./route/auth.js";
 import cors from "cors";
 
 
@@ -20,7 +20,7 @@ const connect= async()=>{
 }
 
 app.use(express.json())
-app.use("/api/auth",authRoutes )
+app.use("/api/auth",authRoute )
  app.get("/", (req, res) =>
   res.send(`Server Running`)
 );
